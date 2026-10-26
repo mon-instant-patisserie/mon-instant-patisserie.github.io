@@ -102,14 +102,16 @@
 
   /* ===== Barre des univers ===== */
   .unav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; padding-block: 10px; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: background-color .9s; }
-  .unav ul { list-style: none; margin: 0 auto; padding: 0 24px; max-width: 1240px; display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; scroll-padding-inline: 24px; -webkit-overflow-scrolling: touch; }
+  .unav ul { list-style: none; margin: 0 auto; padding: 0 24px; max-width: 1240px; display: block; white-space: nowrap; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -webkit-overflow-scrolling: touch; font-size: 0; }
   .unav ul::-webkit-scrollbar { display: none; }
-  .unav li { flex: 0 0 auto; display: flex; min-width: max-content; }
-  .unav a { flex: none; white-space: nowrap; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px 0 8px; border-radius: 999px; text-decoration: none; color: var(--fg); font-weight: 500; font-size: 15px; border: 1.5px solid transparent; transition: background-color .3s, border-color .3s, color .9s; }
+  .unav li { display: inline-block; vertical-align: middle; margin-right: 8px; }
+  .unav li:last-child { margin-right: 24px; }
+  .unav a { white-space: nowrap; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px 0 8px; border-radius: 999px; text-decoration: none; color: var(--fg); font-weight: 500; font-size: 15px; border: 1.5px solid transparent; transition: background-color .3s, border-color .3s, color .9s; }
   .unav a img { width: 28px; height: 28px; flex: none; }
   @media (max-width: 640px) {
     .unav { padding-block: 8px; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 28px), transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 28px), transparent 100%); }
-    .unav ul { padding: 0 16px; gap: 4px; }
+    .unav ul { padding: 0 16px; }
+    .unav li { margin-right: 4px; }
     .unav a { min-height: 40px; padding: 0 12px 0 6px; font-size: 14px; gap: 6px; }
     .unav a img { width: 24px; height: 24px; }
   }
