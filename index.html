@@ -104,6 +104,7 @@
   .unav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; padding-block: 10px; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: background-color .9s; }
   .unav ul { list-style: none; margin: 0 auto; padding: 0 24px; max-width: 1240px; display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; scroll-padding-inline: 24px; -webkit-overflow-scrolling: touch; }
   .unav ul::-webkit-scrollbar { display: none; }
+  .unav li { flex: 0 0 auto; display: flex; min-width: max-content; }
   .unav a { flex: none; white-space: nowrap; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px 0 8px; border-radius: 999px; text-decoration: none; color: var(--fg); font-weight: 500; font-size: 15px; border: 1.5px solid transparent; transition: background-color .3s, border-color .3s, color .9s; }
   .unav a img { width: 28px; height: 28px; flex: none; }
   @media (max-width: 640px) {
